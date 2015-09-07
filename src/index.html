@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>PasswordToggler</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="static/js/vendor/jrburke/require.js"></script>
+        <script>
+            requirejs.config({
+                baseUrl: 'static/js/'
+            });
+        </script>
+        <style>
+
+            body {
+                margin: 0;
+                font-size: 1em;
+            }
+
+            .page-panel {
+                width: 100%;
+                font-family: verdana, sans-serif;
+            }
+
+            .container {
+                margin: 0 auto;
+                width: 50%;
+            }
+
+            input {
+                width: 16em;
+            }
+
+            [type='checkbox']{
+                width: auto;
+            }
+
+            [type='checkbox'] + label {
+                font-style: italic;
+            }
+
+            label {
+                cursor: pointer;
+            }
+
+            button {
+                text-decoration: underline;
+                padding-left: 5px;
+                cursor: pointer;
+                width: 10em;
+            }
+
+            [data-is-shown="false"]{
+                color: #990000;
+            }
+
+            [data-is-shown="true"]{
+                 color: #009900;
+             }
+
+            footer {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                font-size: .9em;
+            }
+
+        </style>
+    </head>
+    <body>
+
+
+        <div class="page-panel">
+            <div class="container">
+                <h1>PasswordToggler</h1>
+                <p>PasswordToggle is a micro library that toggle's the visability of an password field.<br />
+                    The user can if not sure, easily check if the typed password is correct.<br />
+                    Vitaly Friedman, also <a href="https://youtu.be/dGz6y6glEmI?t=3h1m5s">mentioned</a> the importance of just <strong>one</strong> password field on you register form during his talk about Smart eCommerce Checkout Design Patterns at <a href="http://frontendconf.ch/">front /&gt;</a>
+                    Display/hide the given password.</p>
+
+                <h2>Demo</h2>
+                <h3>Toggle button</h3>
+                <form id="passwordToggleFormButton">
+                    <label for="password">Password </label>
+                    <input id="password" type="password" value="You can not see me!" />
+                    <button type="button" id="togglePassword" data-show="show password" data-hide="hide password" data-is-shown="false">show password</button>
+                </form>
+
+                <h3>Toggle checkbox</h3>
+                <form id="passwordToggleFormCheckbox">
+                    <label for="passwordcheckboxtoggle">Password </label>
+                    <input id="passwordcheckboxtoggle" type="password" value="You can not see me!" />
+                    <br />
+                    <input type="checkbox" id="checkboxtoggle"> <label for="checkboxtoggle">show password</label>
+                </form>
+
+                <h3>Toggle focus</h3>
+                <form id="passwordToggleFormFocus">
+                    <label for="passwordcheckboxfocus">Password </label>
+                    <input id="passwordcheckboxfocus" type="password" value="You can not see me!" />
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="page-panel">
+                <div class="container">
+                    <p>PasswordToggle is created by <a href="http://rubenjanssen.me?ref=PasswordToggle">Ruben Janssen</a>.  Fork me on <a href="http://github.com/RubenJnl/PasswordToggler">GitHub</a>. </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            require(['lib/PasswordToggle'], function(PasswordToggle){
+
+                // init button
+                var buttonNode = document.getElementById('passwordToggleFormButton'),
+                    buttonOptions = {
+                        passwordField: '#password', // selector for password field to toggle.
+                        toggle: '#togglePassword' // selector for toggle button/link etc..
+                    };
+
+                new PasswordToggle(buttonNode, buttonOptions);
+
+                // init checkbox
+                var checkboxNode = document.getElementById('passwordToggleFormCheckbox'),
+                        checkboxOptions = {
+                            passwordField: '#passwordcheckboxtoggle', // selector for password field to toggle.
+                            toggle: '#checkboxtoggle' // selector for toggle button/link etc..
+                        };
+
+                new PasswordToggle(checkboxNode, checkboxOptions);
+
+                // init focus
+                var focusNode = document.getElementById('passwordToggleFormFocus'),
+                        focusOptions = {
+                            passwordField: '#passwordcheckboxfocus',
+                            toggle: 'focus'
+                        };
+
+                new PasswordToggle(focusNode, focusOptions);
+
+            });
+        </script>
+    </body>
+</html>

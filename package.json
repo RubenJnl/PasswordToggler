@@ -1,0 +1,28 @@
+{
+    "name": "PasswordToggler",
+    "version": "0.0.1",
+    "description": "PasswordToggler",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/RubenJnl/PasswordToggle.git"
+    },
+    "bugs": {
+        "url": "https://github.com/RubenJnl/PasswordToggle/issues"
+    },
+    "keywords": [
+        "form", "password", "javascript", "toggle", "userexperience", "vanillajs", "UX", "UI", "usability"
+    ],
+    "author": {
+        "name": "Ruben Janssen",
+        "url": "http://rubenjanssen.me"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://www.opensource.org/licenses/mit-license.php"
+        }
+    ],
+    "readmeFilename": "README.md",
+    "dependencies": {},
+    "devDependencies": {}
+}
