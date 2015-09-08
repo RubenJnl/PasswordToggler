@@ -84,7 +84,6 @@ define([], function() {
          */
         _toggleVisibility: function(){
             var toggleOn = arguments[0] || 'other';
-
             if (toggleOn === 'on') {
                 this._passwordField.type  = 'text';
             } else if (toggleOn === 'off') {
@@ -96,7 +95,7 @@ define([], function() {
             } else {
                 this._passwordField.type = 'password';
                 this._setText(this._togglePassword, this._buttonShow);
-                this._toggleData(this._togglePassword, 'data-is-shown', true);
+                this._toggleData(this._togglePassword, 'data-is-shown', false);
             }
 
         },
