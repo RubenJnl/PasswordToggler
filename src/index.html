@@ -19,6 +19,10 @@
                 font-size: 1em;
             }
 
+            article {
+                margin-bottom: 4em;
+            }
+
             .page-panel {
                 width: 100%;
                 font-family: verdana, sans-serif;
@@ -61,11 +65,16 @@
              }
 
             footer {
-                position: absolute;
+                position: fixed;
                 bottom: 0;
                 left: 0;
                 right: 0;
                 font-size: .9em;
+                background: #fafafa;
+            }
+
+            a {
+                white-space: pre;
             }
 
         </style>
@@ -73,7 +82,7 @@
     <body>
 
 
-        <div class="page-panel">
+        <article class="page-panel">
             <div class="container">
                 <h1>PasswordToggler</h1>
                 <p>PasswordToggle is a micro library that toggle's the visability of an password field.<br />
@@ -103,7 +112,7 @@
                     <input id="passwordcheckboxfocus" type="password" value="You can not see me!" />
                 </form>
             </div>
-        </div>
+        </article>
         <footer>
             <div class="page-panel">
                 <div class="container">

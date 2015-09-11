@@ -2,9 +2,8 @@
 
 ## Functionalities
 
-* Toggles visability of an 
+* Toggles visability of an password field with either a button, checkbox or on focus.
 
 ## Roadmap
 
-* Add checkbox for show password
-* Add showpassword on focus
+* Rewrite check elements for error messages
