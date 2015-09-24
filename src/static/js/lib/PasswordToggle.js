@@ -53,6 +53,7 @@ define([], function() {
                             _this._toggleVisibility('off');
                         }
                     } else {
+                        // fallback
                         _this._toggleVisibility();
                     }
 
@@ -86,6 +87,7 @@ define([], function() {
                 this._setText(this._togglePassword, this._buttonHide);
                 this._toggleData(this._togglePassword, 'data-is-shown', true);
             } else {
+                // fallback
                 this._passwordField.type = 'password';
                 this._setText(this._togglePassword, this._buttonShow);
                 this._toggleData(this._togglePassword, 'data-is-shown', false);

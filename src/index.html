@@ -6,12 +6,6 @@
         <title>PasswordToggler</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="static/js/vendor/jrburke/require.js"></script>
-        <script>
-            requirejs.config({
-                baseUrl: 'static/js/'
-            });
-        </script>
         <style>
 
             body {
@@ -121,6 +115,12 @@
             </div>
         </footer>
 
+        <script src="static/js/vendor/jrburke/require.js"></script>
+        <script>
+            requirejs.config({
+                baseUrl: 'static/js/'
+            });
+        </script>
         <script>
             require(['lib/PasswordToggle'], function(PasswordToggle){
 

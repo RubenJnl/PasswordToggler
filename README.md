@@ -5,7 +5,7 @@ Password field display/hide component.
 This component uses a toggle and the password input and gives the opportunity to display the password to the user.
 No need for asking twice for a password, the user can decide to check the password before submitting.
 
-## How does it work?
+### How does it work?
 You can require the PasswordToggle on a form or other parent element.
 
 ## Library information
@@ -44,3 +44,6 @@ Or with require & conditioner
 ```
 The options with field ID's are not mandatory but I recommend using them. There is a default fallback selector, for the password field the fall back is ```[type=password]``` and for the button the fallback is ```[data-is-shown]```.
 
+## Browsersupport
+* All modern browsers
+* IE 10 and newer
