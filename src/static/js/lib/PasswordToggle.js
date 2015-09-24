@@ -16,14 +16,7 @@ define([], function() {
         if ( this._togglePassword && this._passwordField ) {
             this._buttonHide = this._togglePassword.getAttribute('data-hide');
             this._buttonShow = this._togglePassword.getAttribute('data-show');
-            // Initialaze
-// rewrite check because of addition focus option
-        } /*else {
-            // Display error message
-            console.log("%c" + 'Cannot initialize password toggle.', "color:Red;font-weight:bold; background-color:Gold;");
-            console.log("%c" + 'Toggle element for password is:', "color:PowderBlue;font-weight:bold; background-color:RoyalBlue;",  this._togglePassword );
-            console.log("%c" + 'Password field is:', "color:PowderBlue;font-weight:bold; background-color:RoyalBlue;",  this._passwordField );
-        }*/
+        }
 
         this._initialize();
     };
