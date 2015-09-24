@@ -8,6 +8,9 @@ No need for asking twice for a password, the user can decide to check the passwo
 ## How does it work?
 You can require the PasswordToggle on a form or other parent element.
 
+## Library information
+The library can be found in the ''' src/static/js/lib ''' folder.
+
 ### Manual initialization 
 The structure can be as following:
 ```html
