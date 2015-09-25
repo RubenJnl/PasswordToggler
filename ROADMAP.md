@@ -6,4 +6,5 @@
 
 ## Roadmap
 
+* Make field type password before submitting form
 * Rewrite check elements for error messages
